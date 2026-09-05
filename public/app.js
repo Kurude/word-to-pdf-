@@ -67,7 +67,7 @@ async function convertFile() {
   status.hidden = false; status.className = 'status loading'; status.textContent = 'Convertendo documento…';
   try {
     const body = new FormData(); body.append('document', selectedFile);
-    const response = await fetch('/api/convert', { method: 'POST', body });
+    const response = await fetch('https://word-to-pdf-dnq2.onrender.com/api/convert', {method: 'POST', body });
     if (!response.ok) { const data = await response.json().catch(() => ({})); throw new Error(data.erro || 'Erro durante a conversão.'); }
     const blob = await response.blob();
     const fileName = filenameFrom(response.headers.get('content-disposition')) || selectedFile.name.replace(/\.[^.]+$/, '') + '.pdf';

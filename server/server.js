@@ -10,6 +10,7 @@ import convertRoute from './routes/convert.js';
 import { cleanupExpired } from './services/jobs.js';
 
 const app = express();
+app.set('trust proxy', 1);
 const publicDir = path.join(path.dirname(fileURLToPath(import.meta.url)), '..', 'public');
 app.disable('x-powered-by');
 app.use(helmet({ contentSecurityPolicy: { directives: { defaultSrc: ["'self'"], styleSrc: ["'self'", "'unsafe-inline'"], scriptSrc: ["'self'", 'https://www.googletagmanager.com'], connectSrc: ["'self'", 'https://www.google-analytics.com', 'https://*.google-analytics.com', 'https://*.analytics.google.com'], imgSrc: ["'self'", 'data:', 'https://www.google-analytics.com'] } } }));
