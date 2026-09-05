@@ -1,0 +1,10 @@
+{
+  "name": "Word2PDF",
+  "short_name": "Word2PDF",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ],
+  "theme_color": "#d9382b",
+  "background_color": "#fafafa",
+  "display": "standalone"
+}
