@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
-		<loc>http://localhost:3000/</loc>
+		<loc>https://word-to-pdf-8t7.pages.dev/</loc>
 	</url>
 	<url>
-		<loc>http://localhost:3000/sobre</loc>
+		<loc>https://word-to-pdf-8t7.pages.dev/sobre</loc>
 	</url>
 	<url>
-		<loc>http://localhost:3000/privacidade</loc>
+		<loc>https://word-to-pdf-8t7.pages.dev/privacidade</loc>
 	</url>
 	<url>
-		<loc>http://localhost:3000/termos</loc>
+		<loc>https://word-to-pdf-8t7.pages.dev/termos</loc>
 	</url>
 	<url>
-		<loc>http://localhost:3000/contato</loc>
+		<loc>https://word-to-pdf-8t7.pages.dev/contato</loc>
 	</url>
 </urlset>
