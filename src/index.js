@@ -12,6 +12,9 @@ export class Word2PdfContainer extends Container {
 export default {
   async fetch(request, env) {
     const container = getContainer(env.WORD2PDF_CONTAINER, 'word2pdf');
-    return container.fetch(request);
+    const response = await container.fetch(request);
+    const newResponse = new Response(response.body, response);
+    newResponse.headers.delete('X-Robots-Tag');
+    return newResponse;
   }
 };
