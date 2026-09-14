@@ -15,7 +15,7 @@ export default {
     const response = await container.fetch(request);
     const newResponse = new Response(response.body, response);
     newResponse.headers.delete('X-Robots-Tag');
-    newResponse.headers.set('X-Debug-Marker', 'v2-worker-active');
+    newResponse.headers.set('X-Debug-Marker', 'v2-active');
     return newResponse;
   }
 };
