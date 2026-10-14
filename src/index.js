@@ -13,6 +13,14 @@ export default {
   async fetch(request, env) {
     const url = new URL(request.url);
     if (!url.pathname.startsWith('/api/')) {
+      if (url.pathname === '/404') {
+        const assetResponse = await env.ASSETS.fetch(new URL('/404.html', request.url));
+        const publicResponse = new Response(assetResponse.body, assetResponse);
+        publicResponse.status = 404;
+        publicResponse.headers.set('X-Robots-Tag', 'noindex, nofollow');
+        return publicResponse;
+      }
+
       const assetPaths = url.pathname === '/'
         ? ['/home']
         : [url.pathname, url.pathname.endsWith('/') ? `${url.pathname}index.html` : `${url.pathname}.html`];
